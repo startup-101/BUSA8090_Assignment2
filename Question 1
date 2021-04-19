@@ -1,23 +1,30 @@
 Question a code
+curl https://www.staff.hs-mittweida.de/~sarah/data/media/compbiol/expression.tab > expression
 
-Explanation:
+Explanation: Downloaded the file using curl command locally before extracting data from the 'expression' table.
 
 
 Question b code
+curl https://www.staff.hs-mittweida.de/~sarah/data/media/compbiol/annotation.tab > annotation
 
-Explanation:
+Explanation: Downloaded the file using curl command locally before extracting data from the 'annotation' table.
 
 
 Question c code
+join -o 1.1,2.2,1.2,2.3 <(sort -n expression) <(sort -n annotation)
 
-Explanation:
+Explanation: not required
 
 
-Question d(i) code
+Question d(i) relational algebra
 
-Explanation:
+Explanation: In order to retrieve the data for gene, function_1, expr_value and metabolism, we can select  
 
 
 Question d(ii) code
+select metabolism, COUNT(*) as totalcount
+    -> from annotation
+    -> group by metabolism
+    -> having count(*) > 1;
 
-Explanation:
+Explanation: not required
