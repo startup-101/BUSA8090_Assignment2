@@ -1,11 +1,11 @@
 Question a code
-curl https://www.staff.hs-mittweida.de/~sarah/data/media/compbiol/expression.tab > expression
+curl https://www.staff.hs-mittweida.de/~wuenschi/data/media/compbiolbook/expression.tab > expression.tab
 
 Explanation: Downloaded the file using curl command locally before extracting data from the 'expression' table.
 
 
 Question b code
-curl https://www.staff.hs-mittweida.de/~sarah/data/media/compbiol/annotation.tab > annotation
+curl https://www.staff.hs-mittweida.de/~wuenschi/data/media/compbiolbook/annotation.tab > annotation
 
 Explanation: Downloaded the file using curl command locally before extracting data from the 'annotation' table.
 
@@ -18,7 +18,7 @@ Explanation: not required
 
 Question d(i) relational algebra
 
-Explanation: In order to retrieve the data for gene, function_1, expr_value and metabolism, we can select  
+Explanation: In order to retrieve the data for gene, function_1, expr_value and metabolism, join the 'annotation' and 'expression' tables that is further defined as a Cartesian product that wants to look at the 'gene' value.
 
 
 Question d(ii) code
