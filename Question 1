@@ -22,9 +22,9 @@ Explanation: In order to retrieve the data for gene, function_1, expr_value and 
 
 
 Question d(ii) code
-select metabolism, COUNT(*) as totalcount
-    -> from annotation
-    -> group by metabolism
-    -> having count(*) > 1;
+SELECT metabolism, COUNT(*) as totalcount
+    -> FROM annotation
+    -> GROUP by metabolism
+    -> HAVING COUNT(*) > 1;
 
 Explanation: not required
