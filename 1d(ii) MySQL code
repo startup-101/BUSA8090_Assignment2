@@ -1,0 +1,5 @@
+Question 1d(ii) code
+SELECT metabolism, COUNT(*) as TotalCount
+    -> FROM annotation
+    -> GROUP BY metabolism
+    -> HAVING COUNT(*) > 1;
