@@ -1,0 +1,6 @@
+Question c(iii) code
+SELECT m.LastName, m.FirstName, m.MemberID
+-> FROM Member m, Entry e
+-> WHERE NOT EXISTS 
+  -> (SELECT * FROM Entry e WHERE m.MemberID=e.MemberID AND y.Year=2013)
+-> AND m.MemberID=e.MemberID; 
