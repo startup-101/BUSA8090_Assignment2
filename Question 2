@@ -1,53 +1,28 @@
-Question a(i) code
-
-Explanation:
-
-
-Question a(ii) code
-
-Explanation:
-
-
 Question a(iii) code
-
-Explanation:
-
-
-Question b(i) code
-
-Explanation:
-
-
-Question b(ii) code
-
-Explanation:
+SELECT m.LastName, m.FirstName, m.MemberID 
+-> FROM Member m
+-> WHERE m.Coach is NULL;
 
 
 Question b(iii) code
-
-Explanation:
-
-
-Question c(i) code
-
-Explanation:
-
-
-Question c(ii) code
-
-Explanation:
+SELECT m.LastName, m.FirstName, m.MemberID
+-> FROM Member m 
+-> WHERE Year(m.JoinDate)=2013; 
 
 
 Question c(iii) code
-
-Explanation:
-
-
-Question d(i) code
-
-Explanation:
+SELECT m.LastName, m.FirstName, m.MemberID
+-> FROM Member m, Entry e
+-> WHERE NOT EXISTS 
+-> (SELECT * FROM Entry e WHERE m.MemberID=e.MemberID AND e.Year=2013)
+-> AND m.MemberID=e.MemberID; 
 
 
 Question d(ii) code
-
-Explanation:
+CREATE VIEW NewTable AS
+SELECT m.LastName, m.FirstName, m.MemberID 
+-> FROM Member m INNER JOIN Entry e
+  -> (SELECT DISTINCT e1.MemberID
+  -> FROM Entry e1, Entry e2, Entry e3 
+  -> WHERE e1.MemberID=e2.MemberID AND e2.MemberID=e3.MemberID AND e1.Year='2013' AND e2.Year='2014' AND e3.Year='2015')
+-> ON m.MemberID=NewTable.MemberID;
