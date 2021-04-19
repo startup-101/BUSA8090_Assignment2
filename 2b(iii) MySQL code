@@ -1,0 +1,4 @@
+Question b(iii) code
+SELECT m.LastName, m.FirstName, m.MemberID
+-> FROM Member m 
+-> WHERE Year(m.JoinDate)=2013; 
