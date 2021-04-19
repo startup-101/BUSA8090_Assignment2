@@ -1,0 +1,2 @@
+Question c code
+join -o 1.1,2.2,1.2,2.3 <(sort -n expression) <(sort -n annotation)
